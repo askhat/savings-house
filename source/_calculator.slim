@@ -1,0 +1,80 @@
+.ui.fluid.container.gray.background
+  .ui.container
+    .ui.vertical.very.padded.center.aligned.segment
+      .ui.basic.very.padded.segment
+        .ui.huge.header Получить займ просто и быстро!
+      .ui.basic.very.padded.segment
+        javascript:
+          window.stepsData = [{
+            title: 'Отправьте заявку',
+            subTitle: 'Заполнение займёт 2 минуты'
+          }, {
+            title: 'Получите решение за 15 минут',
+            subTitle: 'Вам позвонит менеджер'
+          }, {
+            title: 'Направьте пакет документов',
+            subTitle: 'По заёмщику и недвижимости'
+          }, {
+            title: 'Получите одобрение',
+            subTitle: 'Оформите займ и пользуйтесь деньгами!'
+          }]
+        #steps.ui.four.column.stackable.grid
+          .column v-for="(item, index) in items"
+            .ui.basic.segment: .ui.tiny.header = "{{ item.title }}"
+            .ui.basic.very.padded.segment: .ui.inverted.circular.segment{
+              :class="{ green: currentIndex === index, orange: currentIndex != index }"
+              @click="goTo(index)"
+            }
+              h1.ui.header.dash_header = "{{ index + 1}}"
+            .ui.basic.segment: p = "{{ item.subTitle }}"
+            i.icon.huge.chevron.right{
+              v-if="item != items.length"
+              :class="{ green: currentIndex === index, grey: currentIndex != index }"
+            }
+      .ui.divider
+      .ui.huge.header Рассчитать платёж
+      javascript:
+        window.calcData = {
+          amount: {
+            min: 250000,
+            max: 3000000,
+            step: 250000
+          },
+          period: {
+            min: 3,
+            max: 36,
+            step: 1
+          }
+        }
+      #calc
+        .ui.basic.very.padded.segment
+          .ui.header Сколько денег вам нужно
+          .ui.big.green.header = "{{ amount | rub }}"
+          .ui.twelve.column.center.aligned.grid
+            .twelve.column.row
+              #amount.ui.orange.range
+            .row
+              .column v-for="step in amountSteps" = "{{ step }}"
+        .ui.basic.very.padded.segment
+          .ui.header На какой срок хотите взять
+          .ui.big.green.header = "{{ period | months }}"
+          .ui.twelve.column.center.aligned.grid
+            .ui.twelve.wide.row
+              #period.ui.orange.range
+            .row
+              .column v-for="step in periodSteps" = "{{ step }}"
+        .ui.basic.very.padded.segment
+          .ui.two.column.grid
+            .column
+              .ui.header Ежемесячный платеж:
+              .ui.huge.green.header = "{{ payment }}"
+            .column
+              .ui.header Процентная ставка:
+              .ui.huge.green.header = "{{ interestRate }}"
+      .ui.basic.segment: a График платежей
+      .ui.basic.very.padded.center.aligned.segment
+        button.ui.right.labeled.huge.orange.icon.button
+          i.right.arrow.icon
+          |Отправить заявку
+        p сообщим в течении 15 минут
+        small Расчеты предварительные, точная ставка и доступный размер займа будут известны в момент заключения кредитного договора. КПК «Дом Сбережений» вправе отказать в выдаче займа без объяснения причин.

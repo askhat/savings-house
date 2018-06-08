@@ -1,0 +1,39 @@
+.ui.container
+  .ui.basic.very.padded.segment
+    #terms
+      .ui.basic.very.padded.segment
+        .ui.massive.stackable.tabular.three.item.secondary.menu
+          a.item.active data-tab="conditions" Условия займа
+          a.item data-tab="requirements" Требования
+          a.item data-tab="documents" Документы
+      .ui.basic.very.padded.tab.segment.active data-tab="conditions"
+        table.ui.very.basic.table
+          tbody
+            tr
+              td: b Сумма займа:
+              td От 250 000 до 3 000 000 руб.
+            tr
+              td: b Срок займа:
+              td От 3 до 36 месяцев
+            tr
+              td: b Процентная ставка по займу:
+              td От 1,67% до 3,00% в месяц // от 20,0% до 36,0% годовых
+            tr
+              td: b Обеспечение займа:
+              td Залог комнаты / залог квартиры / залог коттеджа / залог дома с земельным участком / залог коммерческой недвижимости / залог недвижимости + поручительство физических лиц (по решению Кооператива)
+            tr
+              td: b Срок рассмотрения заявки на займ:
+              td Не более 4-х рабочих дней со дня предоставления полного пакета документов
+            tr
+              td: b Порядок погашения займа:
+              td Ежемесячно аннуитетными платежами
+            tr
+              td: b Бесплатное погашение займа:
+              td Внесение наличных через кассу Кооператива
+            tr
+              td: b Штрафы:
+              td За просрочку ежемесячного платежа неустойка в размере 20 % годовых на сумму просроченного основного долга и просроченных процентов
+      .ui.basic.very.padded.tab.segment data-tab="requirements"
+        .ui.header Требования
+      .ui.basic.very.padded.tab.segment data-tab="documents"
+        .ui.header Документы

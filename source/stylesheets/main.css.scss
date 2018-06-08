@@ -1,0 +1,143 @@
+@import 'icons';
+
+p, a, label, .ui.header, .ui.button, .ui.menu {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    .ui.grid > .column {
+      text-align: center !important;
+    }
+  }
+
+  .ui.logo.header {
+    text-align: center !important;
+  }
+
+  .ui.menu > .item {
+    justify-content: center;
+  }
+
+  .ui.icon.header {
+    font-size: 1em;
+  }
+
+  .ui.container {
+    margin: unset !important;
+  }
+
+  form.ui.form {
+    margin: 1em;
+  }
+}
+
+nav.ui.vertical.segment {
+  padding-bottom: 0;
+
+  .ui.menu {
+    border-radius: 0;
+  }
+}
+
+.ui.fluid.container.background {
+  background-image: url('/images/happy-customer.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ui.inverted.green.menu {
+  background-color: #21ba45;
+}
+
+.ui.green.header {
+  .sub.header {
+    color: #21ba45;
+  }
+}
+
+.ui.orange.button {
+  background-color: #ff9c00;
+}
+
+.ui.orange.header {
+  color: #ff9c00 !important;
+}
+
+.ui.inverted.orange.segment {
+  background-color: #21ba45;
+}
+
+.ui.inverted.orange.segment {
+  background-color: #ff9c00 !important;
+}
+
+img.background {
+  position: absolute;
+  height: 100%;
+}
+
+#steps.ui.grid {
+  .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .ui.circular.segment {
+      height: 100px;
+      width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: .8em 0;
+    }
+    @media only screen and(max-width: 767px) {
+      i.icon {
+        display: none;
+      }
+    }
+    i.icon {
+      position: absolute;
+      right: -.5em;
+    }
+  }
+}
+
+.ui.orange.range .inner .track-fill {
+  background-color: #ff9c00;
+}
+.gray.background {
+  background-image: unset !important;
+  background-color: #e6e6e6;
+}
+
+.ui.massive.secondary.menu {
+  .item {
+    width: 30%;
+    margin-left: .5em !important;
+    margin-right: .5em !important;
+  }
+  .item.active {
+    background-color: #21ba45;
+    color: white;
+  }
+}
+
+span.orange {
+  color: #ff9c00;
+}
+
+span.green {
+  color: #21ba45;
+}
+
+.ui.huge.labels {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .ui.label {
+    display: flex;
+    align-items: center;
+  }
+}

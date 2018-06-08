@@ -1,12 +1,18 @@
 doctype html
 head
-  base href="/savings-house/"
+  - if build?
+    base href="#{'/savings-house/' if build?}"
   meta charset="utf-8"
   meta http-equiv="x-ua-compatible" content="ie=edge"
   meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+  link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|PT+Sans:400,700&amp;subset=cyrillic"
   link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"
+  link rel="stylesheet" href="https://tyleryasaka.github.io/semantic-ui-range/range.css"
+  link rel="stylesheet" href="/stylesheets/main.css"
 body
   = yield
   script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
   script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"
+  script src="https://tyleryasaka.github.io/semantic-ui-range/range.js"
   script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"
+  script src="/scripts/app.js"
