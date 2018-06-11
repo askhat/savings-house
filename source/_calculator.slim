@@ -2,7 +2,7 @@
   .ui.container
     .ui.vertical.very.padded.center.aligned.segment
       .ui.basic.very.padded.segment
-        .ui.huge.header Получить займ просто и быстро!
+        .ui.large.header Получить займ просто и быстро!
       .ui.basic.very.padded.segment
         javascript:
           window.stepsData = [{
@@ -32,7 +32,7 @@
               :class="{ green: currentIndex === index, grey: currentIndex != index }"
             }
       .ui.divider
-      .ui.huge.header Рассчитать платёж
+      .ui.large.header Рассчитать платёж
       javascript:
         window.calcData = {
           amount: {
@@ -52,6 +52,7 @@
           .ui.big.green.header = "{{ amount | rub }}"
           .ui.twelve.column.center.aligned.grid
             .twelve.column.row
+              .ui.basic.right.aligned.segment: small миллионы рублей
               #amount.ui.orange.range
             .row
               .column v-for="step in amountSteps" = "{{ step }}"
@@ -59,7 +60,8 @@
           .ui.header На какой срок хотите взять
           .ui.big.green.header = "{{ period | months }}"
           .ui.twelve.column.center.aligned.grid
-            .ui.twelve.wide.row
+            .ui.twelve.column.row
+              .ui.basic.right.aligned.segment: small месяцы
               #period.ui.orange.range
             .row
               .column v-for="step in periodSteps" = "{{ step }}"
@@ -67,14 +69,15 @@
           .ui.two.column.grid
             .column
               .ui.header Ежемесячный платеж:
-              .ui.huge.green.header = "{{ payment }}"
+              .ui.large.green.header = "{{ payment }}"
             .column
               .ui.header Процентная ставка:
-              .ui.huge.green.header = "{{ interestRate }}"
-      .ui.basic.segment: a График платежей
-      .ui.basic.very.padded.center.aligned.segment
+              .ui.large.green.header = "{{ interestRate }}"
+      .ui.tiny.header: a График платежей
+      .ui.basic.center.aligned.segment
         button.ui.right.labeled.huge.orange.icon.button
           i.right.arrow.icon
           |Отправить заявку
         p сообщим в течении 15 минут
+      .ui.basic.center.aligned.segment
         small Расчеты предварительные, точная ставка и доступный размер займа будут известны в момент заключения кредитного договора. КПК «Дом Сбережений» вправе отказать в выдаче займа без объяснения причин.
