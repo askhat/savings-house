@@ -1,20 +1,3 @@
-const steps = new Vue({
-  el: '#steps',
-  data:  {
-    currentIndex: 0
-  },
-  computed: {
-    items () {
-      return window.stepsData
-    }
-  },
-  methods: {
-    goTo (item) {
-      this.currentIndex = item
-    }
-  }
-})
-
 const calc = new Vue({
   el: '#calc',
   filters: {
@@ -79,3 +62,23 @@ const calc = new Vue({
 })
 
 $('.ui.tabular.menu .item').tab()
+
+console.log(ymaps)
+ymaps.ready(function() {
+  var coords = [55.774710, 37.682170];
+
+  var myMap = new ymaps.Map('ya-map', {
+    center: coords,
+    zoom: 14,
+    controls: ['zoomControl', 'fullscreenControl']
+  })
+
+  myMap.behaviors.disable('scrollZoom');
+
+  myMap.geoObjects
+  .add(new ymaps.Placemark(coords, {
+    iconContent: 'КПК «Дом Сбережений»'
+  }, {
+    preset: 'islands#darkgreenStretchyIcon'
+  }))
+})

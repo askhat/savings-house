@@ -1,83 +1,106 @@
 .ui.fluid.container.gray.background
-  .ui.container
-    .ui.vertical.very.padded.center.aligned.segment
-      .ui.basic.very.padded.segment
+  .ui.center.aligned.container
+    .ui.vertical.very.padded.segment
+      .ui.basic.segment
         .ui.large.header Получить займ просто и быстро!
-      .ui.basic.very.padded.segment
-        javascript:
-          window.stepsData = [{
-            title: 'Отправьте заявку',
-            subTitle: 'Заполнение займёт 2 минуты'
-          }, {
-            title: 'Получите решение за 15 минут',
-            subTitle: 'Вам позвонит менеджер'
-          }, {
-            title: 'Направьте пакет документов',
-            subTitle: 'По заёмщику и недвижимости'
-          }, {
-            title: 'Получите одобрение',
-            subTitle: 'Оформите займ и пользуйтесь деньгами!'
-          }]
-        #steps.ui.four.column.stackable.grid
-          .column v-for="(item, index) in items"
-            .ui.basic.segment: .ui.tiny.header = "{{ item.title }}"
-            .ui.basic.very.padded.segment: .ui.inverted.circular.segment{
-              :class="{ green: currentIndex === index, orange: currentIndex != index }"
-              @click="goTo(index)"
-            }
-              h1.ui.header.dash_header = "{{ index + 1}}"
-            .ui.basic.segment: p = "{{ item.subTitle }}"
-            i.icon.huge.chevron.right{
-              v-if="item != items.length"
-              :class="{ green: currentIndex === index, grey: currentIndex != index }"
-            }
-      .ui.divider
+      .ui.basic.segment
+        .ui.four.column.stackable.grid
+          .column
+            .ui.basic.segment
+              .ui.tiny.header
+                |Отправьте
+                br заявку
+            .ui.basic.segment
+              .ui.inverted.green.circular.segment
+                h2.ui.header.dash_header 1
+            .ui.basic.segment
+              .ui.small.thin.header Заполнение займёт 2 минуты
+            i.icon.huge.chevron.right
+            i.icon.huge.chevron.down
+          .column
+            .ui.basic.segment
+              .ui.tiny.header
+                |Получите решение
+                br за 15 минут
+            .ui.basic.segment
+              .ui.inverted.green.circular.segment
+                h1.ui.header.dash_header 2
+            .ui.basic.segment
+              .ui.small.thin.header Вам позвонит менеджер
+            i.icon.huge.chevron.right
+            i.icon.huge.chevron.down
+          .column
+            .ui.basic.segment
+              .ui.tiny.header
+                |Направьте
+                br пакет документов
+            .ui.basic.segment
+              .ui.inverted.circular.green.segment
+                h1.ui.header.dash_header 3
+            .ui.basic.segment
+              .ui.small.thin.header По заёмщику и недвижимости
+            i.icon.huge.chevron.right
+            i.icon.huge.chevron.down
+          .column
+            .ui.basic.segment
+              .ui.tiny.header
+                |Получите
+                br одобрение
+            .ui.basic.segment
+              .ui.inverted.green.circular.segment
+                h1.ui.header.dash_header 4
+            .ui.basic.segment
+              .ui.small.thin.header Оформите займ и пользуйтесь деньгами!
+    .ui.basic.segment
       .ui.large.header Рассчитать платёж
-      javascript:
-        window.calcData = {
-          amount: {
-            min: 250000,
-            max: 3000000,
-            step: 250000
-          },
-          period: {
-            min: 3,
-            max: 36,
-            step: 1
-          }
+    javascript:
+      window.calcData = {
+        amount: {
+          min: 250000,
+          max: 3000000,
+          step: 250000
+        },
+        period: {
+          min: 3,
+          max: 36,
+          step: 1
         }
-      #calc
-        .ui.basic.very.padded.segment
-          .ui.header Сколько денег вам нужно
-          .ui.big.green.header = "{{ amount | rub }}"
-          .ui.twelve.column.center.aligned.grid
-            .twelve.column.row
-              .ui.basic.right.aligned.segment: small миллионы рублей
-              #amount.ui.orange.range
-            .row
-              .column v-for="step in amountSteps" = "{{ step }}"
-        .ui.basic.very.padded.segment
-          .ui.header На какой срок хотите взять
-          .ui.big.green.header = "{{ period | months }}"
-          .ui.twelve.column.center.aligned.grid
-            .ui.twelve.column.row
-              .ui.basic.right.aligned.segment: small месяцы
-              #period.ui.orange.range
-            .row
-              .column v-for="step in periodSteps" = "{{ step }}"
-        .ui.basic.very.padded.segment
-          .ui.two.column.grid
-            .column
-              .ui.header Ежемесячный платеж:
-              .ui.large.green.header = "{{ payment }}"
-            .column
-              .ui.header Процентная ставка:
-              .ui.large.green.header = "{{ interestRate }}"
+      }
+    #calc
+      .ui.basic.segment
+        .ui.header Сколько денег вам нужно
+        .ui.big.green.header = "{{ amount | rub }}"
+        .ui.twelve.column.center.aligned.grid
+          .twelve.column.row
+            .ui.basic.right.aligned.segment: small миллионы рублей
+            #amount.ui.orange.range
+          .row
+            .column v-for="step in amountSteps"
+              small = "{{ step }}"
+      .ui.basic.segment
+        .ui.header На какой срок хотите взять
+        .ui.big.green.header = "{{ period | months }}"
+        .ui.twelve.column.center.aligned.grid
+          .ui.twelve.column.row
+            .ui.basic.right.aligned.segment: small месяцы
+            #period.ui.orange.range
+          .ui.row
+            .column v-for="step in periodSteps"
+              small = "{{ step }}"
+      .ui.basic.very.padded.segment
+        .ui.two.column.grid
+          .column
+            .ui.header Ежемесячный платеж:
+            .ui.large.green.header = "{{ payment }}"
+          .column
+            .ui.header Процентная ставка:
+            .ui.large.green.header = "{{ interestRate }}"
+    .ui.basic.very.padded.segement
       .ui.tiny.header: a График платежей
-      .ui.basic.center.aligned.segment
-        button.ui.right.labeled.huge.orange.icon.button
-          i.right.arrow.icon
-          |Отправить заявку
-        p сообщим в течении 15 минут
-      .ui.basic.center.aligned.segment
-        small Расчеты предварительные, точная ставка и доступный размер займа будут известны в момент заключения кредитного договора. КПК «Дом Сбережений» вправе отказать в выдаче займа без объяснения причин.
+    .ui.basic.center.aligned.segment
+      button.ui.right.labeled.huge.orange.icon.button
+        i.right.arrow.icon
+        |Отправить заявку
+      p сообщим в течении 15 минут
+    .ui.basic.center.aligned.segment
+      small Расчеты предварительные, точная ставка и доступный размер займа будут известны в момент заключения кредитного договора. КПК «Дом Сбережений» вправе отказать в выдаче займа без объяснения причин.

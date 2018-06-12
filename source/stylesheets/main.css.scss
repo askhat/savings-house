@@ -1,5 +1,9 @@
 @import 'icons';
 
+button {
+  margin-bottom: 10px !important;
+}
+
 p, small, label, .ui.header, .ui.button, .ui.menu {
   font-family: 'Montserrat', sans-serif !important;
 }
@@ -10,82 +14,70 @@ a {
   font-weight: 400;
 }
 
-header {
-  padding-top: 20px !important;
-  padding-bottom: 25px !important;
-  .right.aligned.column {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.ui.green.icon.header .content {
-  text-shadow: .5px .5px 1px green;
-}
-
-button {
+.ui.header {
   margin-bottom: 10px !important;
+  margin-top: 0 !important;
 }
 
 @media only screen and (max-width: 767px) {
-  header {
-    .ui.grid > .column {
-      text-align: center !important;
+  .ui.fluid.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  #jumbotron {
+    .ui.icon.header .content {
+      font-size: 16px;
     }
   }
-
-  .ui.menu > .item {
-    justify-content: center;
-  }
-
-  .ui.icon.header {
-    font-size: 1em;
-  }
-
-  .ui.container {
-    margin: unset !important;
-  }
-
-  form.ui.form {
-    margin: 1em;
-  }
-}
-
-.ui.header {
-  font-size: 21px !important;
-  margin: 0 !important;
-}
-
-.ui.huge.header {
-  font-size: 64px !important;
-}
-
-.ui.large.header {
-  font-size: 36px !important;
-}
-
-.ui.medium.header {
-  font-size: 32px !important;
-}
-
-.ui.tiny.header {
-  font-size: 20px !important;
 }
 
 .ui.thin.header {
   font-weight: 400;
 }
 
-.picture.background {
-  background-image: url('/images/happy-customer.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+@media only screen and (min-width: 768px) {
+  .ui.header {
+    font-size: 21px !important;
+  }
+  p { font-size: 18px; }
+  small { font-size: 15px; }
+  .ui.huge.header   { font-size: 64px !important; }
+  .ui.large.header  { font-size: 36px !important; }
+  .ui.medium.header { font-size: 32px !important; }
+  .ui.tiny.header   { font-size: 20px !important; }
+  table.ui.table {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px;
+  }
+  .ui.header.dash_header {
+    margin: 0 !important;
+    img {
+      width: 80px !important;
+      height: 80px !important;
+    }
+    .sub.header {
+      font-size: 18px;
+    }
+  }
+}
+
+.field {
+  margin: 10px !important;
+  input {
+    border: 1px solid darkgray !important;
+  }
 }
 
 .ui.inverted.green.menu {
   background-color: #00a512;
+}
+
+.ui.inverted.green.segment {
+  background-color: #00a512 !important;
+}
+
+.ui.green.labels .label {
+  background-color: #00a512 !important;
 }
 
 .ui.green.header {
@@ -94,6 +86,27 @@ button {
     color: #00a512;
   }
 }
+
+.ui.green.icon.header .content {
+  text-shadow: .5px .5px 1px darkgrey;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.menu .item {
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .picture.background {
+    background-image: url('/images/happy-customer.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+
 
 .ui.orange.button {
   background-color: #ff9c00;
@@ -120,33 +133,15 @@ img.background {
   height: 100%;
 }
 
-#steps.ui.grid {
-  .column:last-child {
-    i.icon {
-      display: none;
+.ui.grid {
+  @media only screen and(max-width: 767px) {
+    i.icon.huge.chevron.right:before {
+      display: none !important;
     }
   }
-  .column {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    .ui.circular.segment {
-      height: 100px;
-      width: 100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: .8em 0;
-    }
-    @media only screen and(max-width: 767px) {
-      i.icon {
-        display: none;
-      }
-    }
-    i.icon {
-      position: absolute;
-      right: -.5em;
+  @media only screen and(min-width: 768px) {
+    i.icon.huge.chevron.down:before {
+      display: none !important;
     }
   }
 }
@@ -163,6 +158,9 @@ img.background {
     margin-left: .5em !important;
     margin-right: .5em !important;
     border-radius: .28571429rem !important;
+    &:hover {
+      color: white;
+    }
   }
   .item.active {
     background-color: #00a512;
@@ -201,16 +199,19 @@ nav.ui.vertical.segment {
   padding-bottom: 0;
 }
 
-.ui.inverted.green.menu {
+.ui.inverted.menu .item {
+  color: white;
+}
+
+.ui.menu {
   border-radius: 0;
   .item {
-    font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-    color: white;
     border-left: 0 !important;
     &:hover {
       background-color: #ff9c00 !important;
+      color: white;
     }
     &::before {
       display: none;
@@ -233,37 +234,78 @@ nav.ui.vertical.segment {
   }
 }
 
-small {
-  font-size: 15px;
-}
-
-#calc .ui.basic.right.aligned.segment {
-  margin: 0;
-  padding-left: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-table.ui.table {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 16px;
-}
-
-.field {
-  margin: 10px !important;
-  input {
-    border: 1px solid darkgray !important;
-  }
-}
-
-p {
-  font-size: 18px;
-}
-
 .ui.relaxed.list {
   font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
   .item {
     margin-top: 20px;
     padding: 0 !important;
   }
+}
+
+#calculator {
+  .ui.right.aligned.segment {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  .ui.stackable.grid .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .ui.basic.segment {
+      flex: 1;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      .ui.circular.segment {
+        height: 100px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+          background-color: #ff9c00 !important;
+        }
+      }
+      &:nth-child(2) {
+        margin-bottom: 50px;
+      }
+    }
+  }
+  i.chevron.icon {
+    position: absolute;
+    color: #00a512;
+  }
+  @media only screen and (max-width: 767px) {
+    i.chevron.icon {
+      bottom: 0;
+      bottom: -10px;
+      transform: translateX(175%);
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    i.chevron.icon {
+      right: -35px;
+      transform: translateY(-25%);
+      &:hover {
+        color: #ff9c00 !important;
+      }
+    }
+  }
+  .column .ui.small.header {
+    bottom: 0;
+  }
+}
+
+i.green.icon {
+  color: #00a512 !important;
+}
+
+.ui.huge.orange.divider {
+  width: 100vw;
+  height: 5px;
+  background-color: #ff9c00;
 }
