@@ -1,0 +1,304 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?qey643");
+  src: url("../fonts/icomoon.eot?qey643#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?qey643") format("truetype"), url("../fonts/icomoon.woff?qey643") format("woff"), url("../fonts/icomoon.svg?qey643#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+i.custom.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+i.custom.icon.clockface:before {
+  content: "\e900";
+  color: #ff9100; }
+
+i.custom.icon.percent:before {
+  content: "\e904";
+  color: #ff9100; }
+
+i.custom.icon.wallet:before {
+  content: "\e905";
+  color: #ff9100; }
+
+button {
+  margin-bottom: 10px !important; }
+
+p, small, label, .ui.header, .ui.button, .ui.menu {
+  font-family: 'Montserrat', sans-serif !important; }
+
+a {
+  font-family: 'PT Sans', sans-serif !important;
+  text-decoration: underline;
+  font-weight: 400; }
+
+.ui.header {
+  margin-bottom: 10px !important;
+  margin-top: 0 !important; }
+
+@media only screen and (max-width: 767px) {
+  .ui.fluid.container {
+    margin-left: 0 !important;
+    margin-right: 0 !important; }
+
+  #jumbotron .ui.icon.header .content {
+    font-size: 16px; } }
+.ui.thin.header {
+  font-weight: 400; }
+
+@media only screen and (min-width: 768px) {
+  .ui.header {
+    font-size: 21px !important; }
+
+  p {
+    font-size: 18px; }
+
+  small {
+    font-size: 15px; }
+
+  .ui.huge.header {
+    font-size: 64px !important; }
+
+  .ui.large.header {
+    font-size: 36px !important; }
+
+  .ui.medium.header {
+    font-size: 32px !important; }
+
+  .ui.tiny.header {
+    font-size: 20px !important; }
+
+  table.ui.table {
+    font-family: 'Montserrat', sans-serif !important;
+    font-size: 16px; }
+
+  .ui.header.dash_header {
+    margin: 0 !important; }
+    .ui.header.dash_header img {
+      width: 80px !important;
+      height: 80px !important; }
+    .ui.header.dash_header .sub.header {
+      font-size: 18px; } }
+.field {
+  margin: 10px !important; }
+  .field input {
+    border: 1px solid darkgray !important; }
+
+.ui.inverted.green.menu {
+  background-color: #00a512; }
+
+.ui.inverted.green.segment {
+  background-color: #00a512 !important; }
+
+.ui.green.labels .label {
+  background-color: #00a512 !important; }
+
+.ui.green.header {
+  color: #00a512 !important; }
+  .ui.green.header .sub.header {
+    color: #00a512; }
+
+.ui.green.icon.header .content {
+  text-shadow: .5px .5px 1px darkgrey; }
+
+@media only screen and (max-width: 767px) {
+  .ui.menu .item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; } }
+@media only screen and (min-width: 768px) {
+  .picture.background {
+    background-image: url("../images/happy-customer.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; } }
+.ui.orange.button {
+  background-color: #ff9c00; }
+
+.ui.orange.header {
+  color: #ff9c00 !important; }
+
+.ui.inverted.orange.segment {
+  background-color: #00a512; }
+
+nav.ui.vertical.segment {
+  padding-top: 0; }
+
+.ui.inverted.orange.segment {
+  background-color: #ff9c00 !important; }
+
+img.background {
+  position: absolute;
+  height: 100%; }
+
+@media only screen and (max-width: 767px) {
+  .ui.grid i.icon.huge.chevron.right:before {
+    display: none !important; } }
+@media only screen and (min-width: 768px) {
+  .ui.grid i.icon.huge.chevron.down:before {
+    display: none !important; } }
+
+.gray.background {
+  background-image: unset !important;
+  background-color: #e6e6e6; }
+
+.ui.massive.secondary.menu {
+  border-radius: 0; }
+  .ui.massive.secondary.menu .item {
+    width: 30%;
+    margin-left: .5em !important;
+    margin-right: .5em !important;
+    border-radius: .28571429rem !important; }
+    .ui.massive.secondary.menu .item:hover {
+      color: white; }
+  .ui.massive.secondary.menu .item.active {
+    background-color: #00a512;
+    color: white; }
+
+span.orange {
+  color: #ff9c00; }
+
+span.green {
+  color: #00a512; }
+
+.ui.huge.labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .ui.huge.labels .ui.label {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-right: 30px; }
+    .ui.huge.labels .ui.label:last-child {
+      margin-right: 0; }
+    .ui.huge.labels .ui.label:hover {
+      background-color: #ff9c00 !important; }
+
+nav.ui.vertical.segment {
+  padding-bottom: 0; }
+
+.ui.inverted.menu .item {
+  color: white; }
+
+.ui.menu {
+  border-radius: 0; }
+  .ui.menu .item {
+    font-weight: bold;
+    text-transform: uppercase;
+    border-left: 0 !important; }
+    .ui.menu .item:hover {
+      background-color: #ff9c00 !important;
+      color: white; }
+    .ui.menu .item::before {
+      display: none; }
+
+.ui.orange.range .inner .track, .ui.orange.range .inner .track-fill {
+  height: 8px !important; }
+.ui.orange.range .inner .track-fill {
+  background-color: #ff9c00;
+  height: 8px !important; }
+.ui.orange.range .inner .thumb {
+  background-color: #ff9c00 !important;
+  border: 3px solid white;
+  top: 3px; }
+
+.ui.relaxed.list {
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif; }
+  .ui.relaxed.list .item {
+    margin-top: 20px;
+    padding: 0 !important; }
+
+#calculator .ui.right.aligned.segment {
+  padding-top: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin: 0; }
+#calculator .ui.stackable.grid .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  #calculator .ui.stackable.grid .column .ui.basic.segment {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #calculator .ui.stackable.grid .column .ui.basic.segment .ui.circular.segment {
+      height: 100px;
+      width: 100px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      #calculator .ui.stackable.grid .column .ui.basic.segment .ui.circular.segment:hover {
+        background-color: #ff9c00 !important; }
+    #calculator .ui.stackable.grid .column .ui.basic.segment:nth-child(2) {
+      margin-bottom: 50px; }
+#calculator i.chevron.icon {
+  position: absolute;
+  color: #00a512; }
+@media only screen and (max-width: 767px) {
+  #calculator i.chevron.icon {
+    bottom: 0;
+    bottom: -10px;
+    -webkit-transform: translateX(175%);
+            transform: translateX(175%); } }
+@media only screen and (min-width: 768px) {
+  #calculator i.chevron.icon {
+    right: -35px;
+    -webkit-transform: translateY(-25%);
+            transform: translateY(-25%); }
+    #calculator i.chevron.icon:hover {
+      color: #ff9c00 !important; } }
+#calculator .column .ui.small.header {
+  bottom: 0; }
+
+i.green.icon {
+  color: #00a512 !important; }
+
+.ui.huge.orange.divider {
+  width: 100vw;
+  height: 5px;
+  background-color: #ff9c00; }
