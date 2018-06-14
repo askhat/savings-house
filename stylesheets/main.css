@@ -122,6 +122,8 @@ a {
     background-repeat: no-repeat; } }
 .ui.orange.button {
   background-color: #ff9c00; }
+  .ui.orange.button:hover {
+    background-color: #00a512; }
 
 .ui.orange.header {
   color: #ff9c00 !important; }
@@ -141,9 +143,6 @@ img.background {
 
 @media only screen and (max-width: 767px) {
   .ui.grid i.icon.huge.chevron.right:before {
-    display: none !important; } }
-@media only screen and (min-width: 768px) {
-  .ui.grid i.icon.huge.chevron.down:before {
     display: none !important; } }
 
 .gray.background {
@@ -191,9 +190,8 @@ span.green {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-right: 30px; }
-    .ui.huge.labels .ui.label:last-child {
-      margin-right: 0; }
+    margin-left: 20px;
+    margin-right: 20px; }
     .ui.huge.labels .ui.label:hover {
       background-color: #ff9c00 !important; }
 
@@ -261,8 +259,8 @@ nav.ui.vertical.segment {
         -ms-flex-pack: center;
             justify-content: center; }
     #calculator .ui.stackable.grid .column .ui.basic.segment .ui.circular.segment {
-      height: 100px;
-      width: 100px;
+      height: 75px;
+      width: 75px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -279,19 +277,6 @@ nav.ui.vertical.segment {
 #calculator i.chevron.icon {
   position: absolute;
   color: #00a512; }
-@media only screen and (max-width: 767px) {
-  #calculator i.chevron.icon {
-    bottom: 0;
-    bottom: -10px;
-    -webkit-transform: translateX(175%);
-            transform: translateX(175%); } }
-@media only screen and (min-width: 768px) {
-  #calculator i.chevron.icon {
-    right: -35px;
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%); }
-    #calculator i.chevron.icon:hover {
-      color: #ff9c00 !important; } }
 #calculator .column .ui.small.header {
   bottom: 0; }
 
@@ -302,3 +287,26 @@ i.green.icon {
   width: 100vw;
   height: 5px;
   background-color: #ff9c00; }
+
+footer {
+  font-family: 'PT Sans';
+  font-size: 15px;
+  color: #9B9B9B; }
+
+@media only screen and (max-width: 767px) {
+  .computer.only {
+    display: none !important; } }
+@media only screen and (min-width: 767px) {
+  .mobile.only {
+    display: none !important; } }
+.ui.header.dash_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.ui.avatar.image {
+  height: 2.5em !important; }
